@@ -12,3 +12,9 @@ Talk on pyhf new features at the PyHEP 2023 workshop
 ```
 micromamba env create --file binder/environment.yml
 ```
+
+and then activate the environment
+
+```
+micromamba activate pyhep-2023
+```
