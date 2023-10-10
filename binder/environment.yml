@@ -1,0 +1,32 @@
+name: pyhep-2023
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  # project core
+  - pyhf==0.7.4
+  - jax==0.4.18
+  - jaxlib==0.4.18
+  # cabinetry
+  - cabinetry==0.6.0
+  # jupyter
+  # notebook v7.x seems to break SSL BinderHub for now
+  - notebook~=6.5
+  # use '>=' as different conda-forge releases across platforms
+  - jupyterlab>=4.0.6
+  - ipympl==0.9.3
+  - jupytext==1.15.2
+  - pip>=23.2.1
+  - pip:
+    # spey
+    - spey==0.1.1
+    - spey-pyhf==0.1.1
+    # bayesian-pyhf
+    - git+https://github.com/malin-horstmann/Bayesian_pyhf.git@b0dad6f526d8e9a36f367cefe2cba7f71f86653b
+
+# nonstandard, but used by conda-lock
+platforms:
+  - linux-64
+  - osx-arm64
