@@ -9,8 +9,12 @@ dependencies:
   - pyhf==0.7.4
   - jax==0.4.14
   - jaxlib==0.4.14
+  - pytorch==2.0.0
+  - array-api-compat==1.4
   # cabinetry
   - cabinetry==0.6.0
+  # bayesian-pyhf
+  - corner==2.2.2
   # jupyter
   # notebook v7.x seems to break SSL BinderHub for now
   - notebook~=6.5
@@ -20,11 +24,14 @@ dependencies:
   - jupytext==1.15.2
   - pip>=23.2.1
   - pip:
+    # custom modifiers
+    - numexpr==2.8.7
     # spey
     - spey==0.1.1
     - spey-pyhf==0.1.1
     # bayesian-pyhf
     - git+https://github.com/malin-horstmann/Bayesian_pyhf.git@b0dad6f526d8e9a36f367cefe2cba7f71f86653b
+    - pytensor==2.17.1
 
 # nonstandard, but used by conda-lock
 platforms:
