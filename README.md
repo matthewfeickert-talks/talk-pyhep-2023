@@ -18,3 +18,9 @@ and then activate the environment
 ```
 micromamba activate pyhep-2023
 ```
+
+## Acknowledgments
+
+[Matthew Feickert](http://www.matthewfeickert.com/) is supported in part by the National Science Foundation under Cooperative Agreements [OAC-1836650](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1836650) and [PHY-2323298](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2323298) (IRIS-HEP).
+
+[![NSF-1836650](https://img.shields.io/badge/NSF-1836650-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1836650) [![NSF-2323298](https://img.shields.io/badge/NSF-2323298-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2323298)
