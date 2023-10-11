@@ -86,7 +86,7 @@ model.expected_actualdata([[1.0, 2.0]])
 # ## Ecosystem extensions
 
 # %% [markdown]
-# ✨ **Checkout [Malin Horstmann's talk on Wednesday on Bayesian and frequentist methodologies with `pyhf`](https://indico.cern.ch/event/1252095/timetable/#19-bayesian-and-frequentist-me)**
+# ✨ **Checkout [Malin Horstmann's talk on Wednesday (2023-10-11) on Bayesian and frequentist methodologies with `pyhf`](https://indico.cern.ch/event/1252095/timetable/#19-bayesian-and-frequentist-me)**
 
 # %% [markdown]
 # Not going to go into the API today as there's a great talk on it later in the workshop
@@ -206,7 +206,7 @@ pyhf.get_backend()
 # Possible to also focus more on optimization.
 
 # %% [markdown]
-# ✨ **Checkout [Jack Araz's talk on Friday on Spey](https://indico.cern.ch/event/1252095/timetable/#8-spey-smooth-inference-for-re)**
+# ✨ **Checkout [Jack Araz's talk on Thursday (2023-10-12) on Spey](https://indico.cern.ch/event/1252095/timetable/#8-spey-smooth-inference-for-re)**
 
 # %% [markdown]
 # Other tools, like [Spey](https://speysidehep.github.io/spey/), are already using plugins to be able to use `pyhf` as an optional backend with [`spey-pyhf`](https://speysidehep.github.io/spey-pyhf/quick_start.html).
