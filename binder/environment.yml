@@ -11,6 +11,9 @@ dependencies:
   - jaxlib==0.4.14
   # cabinetry
   - cabinetry==0.6.0
+  # Bayesian-pyhf
+  - corner==2.2.2
+  - pytensor==2.17.1
   # jupyter
   # notebook v7.x seems to break SSL BinderHub for now
   - notebook~=6.5
