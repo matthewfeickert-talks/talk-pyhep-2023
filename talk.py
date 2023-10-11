@@ -102,6 +102,7 @@ import Bayesian_pyhf.infer
 
 # %% [markdown]
 # <br>
+#
 # Beginnging to explore the [concept of a plugin system for `pyhf`](https://github.com/scikit-hep/pyhf/issues/2233) to make it easier for tools to build on top.
 #
 # The goal would be that instead of having to do both
@@ -117,14 +118,92 @@ import Bayesian_pyhf.infer
 # python -m pip install --upgrade pyhf bayesian-pyhf  # not yet on PyPI
 # ```
 #
-# and then from
+# and then the following
 #
 # ```python
 # import pyhf
 # pyhf.bayes  # this isn't a real API, just an example of an idea
 # ```
 #
-# would work.
+# would work without additional imports.
+
+# %% [markdown]
+# ### Plugin system for backends
+
+# %% [markdown]
+# Recent advances in the [Python array API standard](https://data-apis.org/array-api/) have lead to the Array API compatibility library [`array-api-compat`](https://github.com/data-apis/array-api-compat), which allows interoperability to any Array library that impliments the standard. 
+#
+# * Currently supported: NumPy, CuPy, PyTorch
+# * Implimenting: JAX
+
+# %%
+import array_api_compat
+
+
+# %% [markdown]
+# Impliment once with `array-api-compat`
+
+# %%
+def example_function(x, y):
+    xp = array_api_compat.array_namespace(x, y)
+    # Now use xp as the array library namespace
+    return xp.mean(x, axis=0) + 2 * xp.std(y, axis=0)
+
+
+# %% [markdown]
+# and then execute the same function code with NumPy
+
+# %%
+import numpy as np
+
+np_x = np.arange(0., 100.)
+np_y = np.square(np_x)
+
+example_function(np_x, np_y)
+
+# %% [markdown]
+# as well as PyTorch
+
+# %%
+import torch
+
+torch_x = torch.arange(0., 100.)
+torch_y = torch.square(torch_x)
+
+example_function(torch_x, torch_y)
+
+# %% [markdown]
+# Don't have access to GPUs for today's demo, but if we did CuPy would work as well
+
+# %% [markdown]
+# ```
+# # micromamba install --channel conda-forge cupy
+# ```
+#
+# ```python
+# import cupy as cp
+#
+# cp_x = cp.arange(0., 100.)
+# cp_y = cp.square(cp_x)
+#
+# example_function(cp_x, cp_y)  # array(5956.09328209)
+# ```
+
+# %% [markdown]
+# While `pyhf` already has the `pyhf.tensorlib` shim layer between the different backends
+
+# %%
+pyhf.tensorlib
+
+# %%
+pyhf.get_backend()
+
+# %% [markdown]
+# revising the `pyhf` tensor libarires to work with `array-api-compat` means that the tensor backends could become plugins in the future.
+#
+# If users have an array library that impliments the Python array API standard they could impliment the tensor backend themselves.
+#
+# Possible to also focus more on optimization.
 
 # %% [markdown]
 # ✨ **Checkout [Jack Araz's talk on Friday on Spey](https://indico.cern.ch/event/1252095/timetable/#8-spey-smooth-inference-for-re)**
