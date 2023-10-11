@@ -9,6 +9,8 @@ dependencies:
   - pyhf==0.7.4
   - jax==0.4.14
   - jaxlib==0.4.14
+  - pytorch==2.0.0
+  - array-api-compat==1.4
   # cabinetry
   - cabinetry==0.6.0
   # bayesian-pyhf
