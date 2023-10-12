@@ -2,6 +2,8 @@
 
 Talk on pyhf new features at the PyHEP 2023 workshop
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8436002.svg)](https://doi.org/10.5281/zenodo.8436002)
+
 * SSL BinderHub: [![Binder](https://binderhub.ssl-hep.org/badge_logo.svg)](https://binderhub.ssl-hep.org/v2/gh/matthewfeickert-talks/talk-pyhep-2023/HEAD?urlpath=lab/tree/talk.ipynb)
 * mybinder BinderHub: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewfeickert-talks/talk-pyhep-2023/HEAD?urlpath=lab/tree/talk.ipynb)
 
