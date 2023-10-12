@@ -12,7 +12,7 @@ Talk on pyhf new features at the PyHEP 2023 workshop
 ### conda/mamba/micromamba
 
 ```
-micromamba env create --file binder/environment.yml
+micromamba env create --file environment.yml
 ```
 
 and then activate the environment

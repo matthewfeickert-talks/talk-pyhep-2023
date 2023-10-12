@@ -36,4 +36,3 @@ dependencies:
 # nonstandard, but used by conda-lock
 platforms:
   - linux-64
-  - osx-arm64

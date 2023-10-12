@@ -1,3 +1,6 @@
+# Install environment from lock file
+conda install --file binder/conda-lock.yml
+
 # custom modifiers until pyhf v0.8.0rc1 is released
 python -m pip install --upgrade pip wheel
 python -m pip install --upgrade git+https://github.com/scikit-hep/pyhf.git@feat/addCustomModifierPython
