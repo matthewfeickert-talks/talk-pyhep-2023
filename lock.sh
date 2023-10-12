@@ -18,4 +18,4 @@ docker run \
         conda-lock lock \
             --micromamba \
             --file environment.yml && \
-        mv conda-lock.yml binder/environment.yml"
+        mv conda-lock.yml binder/"
