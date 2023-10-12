@@ -1,5 +1,5 @@
 # Install environment from lock file
-micromamba install --file binder/conda-lock.yml
+conda install --file binder/conda-lock.yml
 
 # custom modifiers until pyhf v0.8.0rc1 is released
 python -m pip install --upgrade pip wheel
